@@ -69,4 +69,20 @@ public class DTO {
         @Size(min = 1, max = 25)
         private String sizeTest; // 50
     }
+
+    @Builder
+    @Getter
+    @NoArgsConstructor
+    @AllArgsConstructor
+    public static class ReqeustGroupDto {
+
+        @NotNull(groups = {ValidGroupOne.class, ValidGroupTwo.class})
+        private String notNullCheck; // null
+
+        @NotEmpty(groups = {ValidGroupOne.class})
+        private String notEmptyCheck; // ""
+
+        @NotBlank(groups = {ValidGroupTwo.class})
+        private String notBlankCheck; // " "
+    }
 }

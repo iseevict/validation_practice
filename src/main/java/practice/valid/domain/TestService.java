@@ -29,4 +29,13 @@ public class TestService {
     public void validatedTestMethod(DTO.ReqeustValidatedDto request) {
         validatedTestService.validatedTestMethod(request);
     }
+
+    /**
+     * @Validated Group 테스트
+     */
+    public void validatedGroupTestMethod(DTO.ReqeustGroupDto request) {
+        System.out.println("notNullCheck : " + request.getNotNullCheck());
+        System.out.println("notEmptyCheck : " + request.getNotEmptyCheck());
+        System.out.println("notBlankCheck : " + request.getNotBlankCheck());
+    }
 }
