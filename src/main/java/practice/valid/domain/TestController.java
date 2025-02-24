@@ -35,4 +35,10 @@ public class TestController {
     public void validatedGroupTwoTest(@RequestBody @Validated(ValidGroupTwo.class) DTO.ReqeustGroupDto request) {
         testService.validatedGroupTestMethod(request);
     }
+
+    // Custom Validated
+    @PostMapping("/test/custom")
+    public void validatedCustomTest(@RequestBody @Valid DTO.RequestCustomDto request) {
+        testService.validatedCustomTestMethod(request);
+    }
 }

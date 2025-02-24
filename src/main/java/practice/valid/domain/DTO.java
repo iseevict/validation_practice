@@ -85,4 +85,14 @@ public class DTO {
         @NotBlank(groups = {ValidGroupTwo.class})
         private String notBlankCheck; // " "
     }
+
+    @Builder
+    @Getter
+    @NoArgsConstructor
+    @AllArgsConstructor
+    public static class RequestCustomDto {
+
+        @ValidPhone
+        private String phone;
+    }
 }

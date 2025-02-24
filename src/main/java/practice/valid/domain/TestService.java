@@ -38,4 +38,11 @@ public class TestService {
         System.out.println("notEmptyCheck : " + request.getNotEmptyCheck());
         System.out.println("notBlankCheck : " + request.getNotBlankCheck());
     }
+
+    /**
+     * @ValidPhone Custom Valid 테스트
+     */
+    public void validatedCustomTestMethod(DTO.RequestCustomDto request) {
+        System.out.println("notNullCheck : " + request.getPhone());
+    }
 }
